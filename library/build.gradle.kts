@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("maven-publish")
 }
 
 android {
@@ -71,3 +72,34 @@ dependencies {
     // Gson
     implementation("com.google.code.gson:gson:2.10.1")
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Define the publication
+            create<MavenPublication>("release") {
+                // Configure the publication
+                from(components["release"])
+
+                // Optionally configure the publication
+                groupId = "com.github.farukcuha"
+                artifactId = "boilerplate-android"
+                version = "1.0.0"
+            }
+        }
+
+        // Publish to Maven repository
+        /*repositories {
+            maven {
+                // Your Maven repository URL
+                url = uri("https://your.repository.url")
+                credentials {
+                    // If authentication is required
+                    username = "your-username"
+                    password = "your-password"
+                }
+            }
+        }*/
+    }
+}
+
