@@ -13,6 +13,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -20,10 +21,12 @@ import com.farukcuha.library.R
 import com.farukcuha.library.theme.LocalSpacing
 import com.farukcuha.library.view.AppTheme
 import com.farukcuha.library.view.RoundedButton
+import com.farukcuha.library.view.Spacer
 
 @Composable
 fun CheckMailScreenContent(
     modifier: Modifier = Modifier,
+    image: Painter = painterResource(R.drawable.logo),
     buttonText: String = "Enter code manually",
     onClickButton: () -> Unit,
 ) {
@@ -34,9 +37,10 @@ fun CheckMailScreenContent(
     ) {
         Image(
             modifier = Modifier.size(200.dp),
-            painter = painterResource(id = R.drawable.logo),
+            painter = image,
             contentDescription = null
         )
+        Spacer(LocalSpacing.current.medium)
         RoundedButton(
             modifier = Modifier
                 .fillMaxWidth(),

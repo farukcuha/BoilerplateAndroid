@@ -51,6 +51,7 @@ fun EnterEmailScreenContent(
             painter = image,
             contentDescription = null
         )
+        Spacer(LocalSpacing.current.medium)
         OutlinedTextField(
             value = value,
             onValueChange = onValueChanged,

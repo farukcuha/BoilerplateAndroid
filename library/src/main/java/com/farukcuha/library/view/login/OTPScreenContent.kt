@@ -57,6 +57,7 @@ fun OTPScreenContent(
                 contentDescription = null,
                 modifier = Modifier.size(200.dp)
             )
+            Spacer(LocalSpacing.current.medium)
             Text(
                 text = title,
                 fontWeight = FontWeight.Bold,
@@ -74,7 +75,8 @@ fun OTPScreenContent(
                 modifier = Modifier
                     .fillMaxWidth(),
                 text = buttonText,
-                isEnabled = otpCodeValue?.length == otpLength
+                isEnabled = otpCodeValue?.length == otpLength,
+                isLoading = loading
             ) {
                 onClickContinue()
             }
