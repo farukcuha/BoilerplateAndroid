@@ -36,7 +36,7 @@ This library is licensed under the [MIT License](LICENSE).
 
 ### About the Author:
 
-BoilerplateAndroid is developed and maintained by [Faruk Cuha](https://github.com/farukcuha), an experienced Android developer passionate about creating efficient and reusable code for fellow developers.
+BoilerplateAndroid is developed and maintained by [farukcuha](https://github.com/farukcuha), an experienced Android developer passionate about creating efficient and reusable code for fellow developers.
 
 ### Support:
 
